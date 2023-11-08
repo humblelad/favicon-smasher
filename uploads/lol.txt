@@ -1,0 +1,5 @@
+https://google.com
+https://www.jenkins.io/doc/book/blueocean/dashboard/
+https://medium.com
+http://example.com
+ftp://lol.com

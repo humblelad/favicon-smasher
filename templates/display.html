@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Section</title>
+</head>
+<body>
+    <h1>Display Section</h1>
+
+    {% if matches %}
+        <h2>Favicon Hash Matched!!</h2>
+        <ul>
+            {% for match in matches %}
+                <li>Domain: {{ match[0] }}, Hash: {{ match[1] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No matches found.</p>
+    {% endif %}
+</body>
+</html>

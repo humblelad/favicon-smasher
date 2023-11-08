@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Section</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Results</h1>
+
+        {% if matches %}
+            <div class="mt-4">
+                <h2>Favicon Hash Matched!!</h2>
+                <ul class="list-group">
+                    {% for match in matches %}
+                        <li class="list-group-item">Domain: <a href="{{ match[0] }}" target="_blank">{{ match[0] }}</a> , Hash: {{ match[1] }}</li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p class="mt-4">No matches found.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
